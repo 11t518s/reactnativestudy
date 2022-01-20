@@ -6,5 +6,5 @@
   "minify": false,
   "urlRandomness": null,
   "https": false,
-  "scheme": "my-scheme"
+  "scheme": null
 }

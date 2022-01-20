@@ -1,14 +1,11 @@
 {
   "expo": {
-    "name": "movieApp",
-    "slug": "movieApp",
+    "name": "movietest",
+    "slug": "movietest",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "bundleIdentifier": "org.name.movieApp"
-    }
+    ]
   },
-  "name": "movieApp"
+  "name": "movietest"
 }
