@@ -11,6 +11,7 @@ import {
 } from "@react-navigation/native";
 import Tabs from "./navigation/Tab";
 import Stack from "./navigation/Stack";
+import Root from "./navigation/Root";
 
 export default function App() {
   const [assets] = useAssets([require("./test.jpeg")]);
@@ -25,8 +26,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      {/*<Tabs />*/}
-      <Stack />
+      <Root />
     </NavigationContainer>
   );
 }
