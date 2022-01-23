@@ -12,21 +12,22 @@ import {
 import Tabs from "./navigation/Tab";
 import Stack from "./navigation/Stack";
 import Root from "./navigation/Root";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./styled";
 
 export default function App() {
   const [assets] = useAssets([require("./test.jpeg")]);
   const [loaded] = useFonts([Ionicons.font]);
   const colorScheme = useColorScheme();
-  const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    colorScheme === "dark" ? setIsDark(true) : setIsDark(false);
-  }, [colorScheme]);
+  const isDark = useColorScheme() === "dark";
   if (!assets && !loaded) {
     return <AppLoading />;
   }
   return (
-    <NavigationContainer>
-      <Root />
-    </NavigationContainer>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <NavigationContainer>
+        <Root />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }
