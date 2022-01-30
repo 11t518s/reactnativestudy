@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Text, useColorScheme, View } from "react-native";
+import React from "react";
+import { useColorScheme } from "react-native";
 import AppLoading from "expo-app-loading";
 import { Ionicons } from "@expo/vector-icons";
-import { Asset, useAssets } from "expo-asset";
+import { useAssets } from "expo-asset";
 import { useFonts } from "expo-font";
-import {
-  NavigationContainer,
-  DarkTheme,
-  DefaultTheme,
-} from "@react-navigation/native";
-import Tabs from "./navigation/Tab";
-import Stack from "./navigation/Stack";
+import { NavigationContainer } from "@react-navigation/native";
 import Root from "./navigation/Root";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./styled";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 export default function App() {
   const [assets] = useAssets([require("./test.jpeg")]);
@@ -24,10 +21,12 @@ export default function App() {
     return <AppLoading />;
   }
   return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <NavigationContainer>
-        <Root />
-      </NavigationContainer>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <NavigationContainer>
+          <Root />
+        </NavigationContainer>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
