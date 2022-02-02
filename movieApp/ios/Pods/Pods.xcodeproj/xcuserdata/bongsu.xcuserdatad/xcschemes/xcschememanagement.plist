@@ -54,7 +54,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EXWebBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Expo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ExpoLinearGradient.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -215,6 +225,16 @@
 			<false/>
 		</dict>
 		<key>ReactCommon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UMCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UMReactNativeAdapter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
