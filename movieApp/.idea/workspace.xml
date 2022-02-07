@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="110ff49e-07ba-42bf-b8a4-042c2f9b8177" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.Rhistory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/Root.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/Stack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/Tab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Movie.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Tv.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/movietest/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/movietest/AppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="110ff49e-07ba-42bf-b8a4-042c2f9b8177" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,10 +18,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="23vL4PChEmMLKsB7wp3fYgkWjrV" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="2" id="Remove" />
   </component>
@@ -51,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="GitStage.ChangesTree.GroupingKeys" value="directory&#10;module&#10;repository" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -83,6 +64,7 @@
       <workItem from="1642866427487" duration="598000" />
       <workItem from="1642913872680" duration="3549000" />
       <workItem from="1642918373857" duration="886000" />
+      <workItem from="1644219992551" duration="227000" />
     </task>
     <servers />
   </component>
@@ -99,7 +81,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
