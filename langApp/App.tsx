@@ -49,14 +49,7 @@ export default function App() {
       },
 
       onPanResponderRelease: () => {
-        Animated.spring(POSITION, {
-          toValue: {
-            x: 0,
-            y: 0,
-          },
-          bounciness: 20,
-          useNativeDriver: false,
-        }).start();
+        POSITION.extractOffset();
       },
     })
   ).current;
