@@ -1,68 +1,57 @@
 import React, { useRef } from "react";
-import { Animated, PanResponder } from "react-native";
+import { Animated, PanResponder, Text, View } from "react-native";
 import styled from "styled-components/native";
 
 const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: #00a8ff;
 `;
-const Box = styled.View`
-  background-color: tomato;
-  width: 200px;
-  height: 200px;
+
+const Card = styled(Animated.createAnimatedComponent(View))`
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 `;
-const AnimatedBox = Animated.createAnimatedComponent(Box);
-
-export default function App() {
-  const POSITION = useRef(
-    new Animated.ValueXY({
-      x: 0,
-      y: 0,
-    })
-  ).current;
-
-  const opacity = POSITION.y.interpolate({
-    inputRange: [-300, 0, 300],
-    outputRange: [1, 0.5, 1],
-  });
-  const rotation = POSITION.y.interpolate({
-    inputRange: [-300, 300],
-    outputRange: ["-360deg", "360deg"],
-  });
-  const borderRadius = POSITION.y.interpolate({
-    inputRange: [-300, 300],
-    outputRange: [100, 0],
-  });
-  const bgColor = POSITION.y.interpolate({
-    inputRange: [-300, 300],
-    outputRange: ["rgb(255, 99, 71)", "rgb(71, 166, 255)"],
-  });
+function App() {
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: (_, { dx, dy }) => {
-        POSITION.setValue({
-          x: dx,
-          y: dy,
-        });
+      onPanResponderMove: (_, { dx }) => {
+        position.setValue(dx);
       },
-
+      onPanResponderGrant: () => onPressIn(),
       onPanResponderRelease: () => {
-        POSITION.extractOffset();
+        Animated.parallel([
+          onPressOut,
+          Animated.spring(position, {
+            toValue: 0,
+            useNativeDriver: true,
+          }),
+        ]).start();
       },
     })
   ).current;
+  const scale = useRef(new Animated.Value(1)).current;
+  const position = useRef(new Animated.Value(0)).current;
+  const onPressIn = () =>
+    Animated.spring(scale, { toValue: 0.95, useNativeDriver: true }).start();
+  const onPressOut = Animated.spring(scale, {
+    toValue: 1,
+    useNativeDriver: true,
+  });
   return (
     <Container>
-      <AnimatedBox
-        {...panResponder.panHandlers}
-        style={{
-          borderRadius,
-          backgroundColor: bgColor,
-          transform: [...POSITION.getTranslateTransform()],
-        }}
-      />
+      <Card style={{ transform: [{ scale }] }}>
+        <Text>test</Text>
+      </Card>
     </Container>
   );
 }
+
+export default App;
